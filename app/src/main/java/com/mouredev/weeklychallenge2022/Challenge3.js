@@ -1,4 +1,3 @@
-package com.mouredev.weeklychallenge2022
 
 /*
  * Reto #3
@@ -18,29 +17,17 @@ package com.mouredev.weeklychallenge2022
  *
  */
 
-fun main() {
-
-    (1..100).forEach { number ->
-        if (isPrime(number)) {
-            println(number)
+const esPrimo = (numero) =>{
+    for(i = 2; i<numero; i++){
+        if(numero%i == 0){
+            return false;
         }
     }
+    return true;
 }
-
-private fun isPrime(number: Int): Boolean {
-
-    if (number < 2) {
-        return false
+for(j = 2;j<100;j++){
+    if(esPrimo(j)){
+        console.log(j);
     }
-
-    for (i in 2 until number) {
-        if (number % i == 0) {
-            return false
-        }
-    }
-
-    return true
 }
-
-
 
