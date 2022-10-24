@@ -1,4 +1,3 @@
-package com.mouredev.weeklychallenge2022
 
 /*
  * Reto #8
@@ -17,24 +16,20 @@ package com.mouredev.weeklychallenge2022
  *
  */
 
-fun main() {
-    println(decimalToBinary(387))
-    println(decimalToBinary(0))
-}
 
-fun decimalToBinary(decimal: Int): String {
-
-    var number = decimal
-    var binary = ""
-
-    while (number != 0) {
-
-        val reminder = number % 2
-        number /= 2
-
-        binary = "$reminder$binary"
+const decimalABinario = (i)=>{
+    numero  = i;
+    let binario = "";
+    if(i==0){
+        binario = "0";
     }
+    while(parseInt(numero) != 0){
+        binario += parseInt(numero) % 2;
+        numero /= 2;
+    }
+    return binario.split("").reverse().join("");
 
-    return binary.ifEmpty { "0" }
 }
+// decimalABinario(20);
+console.log(decimalABinario(9));
 
